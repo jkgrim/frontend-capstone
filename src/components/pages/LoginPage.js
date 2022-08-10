@@ -82,6 +82,12 @@ export default function LoginPage(props) {
           </div>
           <div className="error-msg">{errorMsg}</div>
         </form>
+
+        <div className="create-account">
+          <a href="https://devpipeline-mock-api.herokuapp.com/">
+            Create an account
+          </a>
+        </div>
       </div>
     </div>
   );

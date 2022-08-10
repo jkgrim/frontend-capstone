@@ -1,14 +1,42 @@
+.active {
+  background-color: #454545;
+}
+
 .navbar {
-  height: 60px;
+  height: 70px;
   background-color: #212121;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border: 3px solid #212121;
 
-  a {
-    text-decoration: none;
-    color: yellow;
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transition: 0.2s ease-in-out;
+    color: #212121;
     cursor: pointer;
-    font-size: 20px;
+    border: 1px solid #212121;
+
+    &:hover {
+      background-color: #454545;
+    }
+
+    a {
+      -webkit-appearance: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: yellow;
+      cursor: pointer;
+      font-size: 20px;
+      transition: 0.2s ease-in-out;
+      height: 100%;
+      width: 100%;
+    }
   }
 }

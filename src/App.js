@@ -6,6 +6,7 @@ import { StandardUser } from "./components/helpers/userRoles";
 import Dashboard from "./components/pages/Dashboard";
 import NavBar from "./components/navigation/NavBar";
 import BoxShadow from "./components/pages/BoxShadow";
+import About from "./components/pages/About";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/boxshadow" component={BoxShadow} />
+          <Route path="/about" component={About} />
         </Switch>
       </Router>
     </div>

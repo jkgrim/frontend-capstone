@@ -11,6 +11,38 @@ export default function Dashboard() {
 
           <Link to="/boxshadow">Box Shadow</Link>
         </div>
+
+        <div className="component-wrapper">
+          <div className="preview-img">
+            <img src="" alt="" />
+          </div>
+
+          <Link to="/boxshadow">Box Shadow</Link>
+        </div>
+
+        <div className="component-wrapper">
+          <div className="preview-img">
+            <img src="" alt="" />
+          </div>
+
+          <Link to="/boxshadow">Box Shadow</Link>
+        </div>
+
+        <div className="component-wrapper">
+          <div className="preview-img">
+            <img src="" alt="" />
+          </div>
+
+          <Link to="/boxshadow">Box Shadow</Link>
+        </div>
+
+        <div className="component-wrapper">
+          <div className="preview-img">
+            <img src="" alt="" />
+          </div>
+
+          <Link to="/boxshadow">Box Shadow</Link>
+        </div>
       </div>
     </div>
   );
