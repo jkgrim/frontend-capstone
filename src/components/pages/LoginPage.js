@@ -13,6 +13,7 @@ export default function LoginPage(props) {
   function handleSubmit(e) {
     e.preventDefault();
     setAuthIsLoading(true);
+    console.log(errorMsg);
     setErrorMsg("");
 
     fetch("https://devpipeline-mock-api.herokuapp.com/api/auth/login", {
@@ -30,8 +31,11 @@ export default function LoginPage(props) {
       .then((data) => {
         if (data.message === "Logged In") {
           setUser(data.user);
-          history.push("/dashboard");
           setAuthIsLoading(false);
+          history.push("/dashboard");
+        } else {
+          setAuthIsLoading(false);
+          setErrorMsg("Invalid Credentials");
         }
       })
       .catch((err) => {
@@ -42,35 +46,43 @@ export default function LoginPage(props) {
   }
 
   return (
-    <div>
-      <h1>Login</h1>
-
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+    <div className="login-container">
+      <div className="login-wrapper">
+        <div className="login-header">
+          <h1>Login</h1>
         </div>
 
-        <div>
-          <input
-            type="password"
-            placeholder="Password"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="login-form-container">
+          <div className="email-input">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
 
-        <div>
-          {!authIsLoading ? <input type="submit" /> : <h1>...Submitting</h1>}
-        </div>
-        {errorMsg}
-      </form>
+          <div className="password-input">
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+
+          <div className="submit-btn">
+            {!authIsLoading ? (
+              <input type="submit" />
+            ) : (
+              <h1 style={{ color: "yellow" }}>...Submitting</h1>
+            )}
+          </div>
+          <div className="error-msg">{errorMsg}</div>
+        </form>
+      </div>
     </div>
   );
 }
