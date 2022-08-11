@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import boxshadow from "../helpers/images/boxshadow.png";
 import coinflip from "../helpers/images/coinflip.png";
 import diceroll from "../helpers/images/diceroll.png";
+import weather from "../helpers/images/weather.png";
 
 export default function Dashboard() {
   return (
@@ -49,10 +50,17 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src="" alt="" />
+            <img src={weather} alt="" />
           </div>
 
-          <Link to="/boxshadow">Box Shadow</Link>
+          <div className="component-description">
+            <p>
+              This component allows the user to input a location and recieve the
+              current, high, and low temperatures for the day.
+            </p>
+          </div>
+
+          <Link to="/weather">Weather</Link>
         </div>
 
         <div className="component-wrapper">

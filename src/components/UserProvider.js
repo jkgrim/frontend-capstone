@@ -36,7 +36,6 @@ export default function UserProvider({ children }) {
   };
 
   useEffect(() => {
-    console.log("hit");
     setAuthIsLoading(true);
     fetch("https://devpipeline-mock-api.herokuapp.com/api/auth/check-login", {
       credentials: "include",
@@ -55,7 +54,7 @@ export default function UserProvider({ children }) {
         console.error("Check Login Error: ", err);
         setAuthIsLoading(false);
       });
-  }, []);
+  }, [history]);
 
   return (
     <UserContext.Provider value={userState}>{children}</UserContext.Provider>

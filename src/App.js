@@ -8,6 +8,7 @@ import Dashboard from "./components/pages/Dashboard";
 import BoxShadow from "./components/pages/BoxShadow";
 import CoinFlip from "./components/pages/CoinFlip";
 import DiceRoll from "./components/pages/DiceRoll";
+import Weather from "./components/pages/Weather";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/boxshadow" component={BoxShadow} />
           <Route path="/coin-flip" component={CoinFlip} />
           <Route path="/dice-roll" component={DiceRoll} />
+          <Route path="/weather" component={Weather} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
         </Switch>

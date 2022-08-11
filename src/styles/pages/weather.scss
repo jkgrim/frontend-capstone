@@ -1,0 +1,54 @@
+.weather-container {
+  height: 93vh;
+  width: 100vw;
+  background-color: #2e2e2e;
+
+  .weather-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .weather-header {
+      color: yellow;
+      font-size: 32px;
+    }
+
+    input {
+      width: 500px;
+      height: 35px;
+      border-radius: 10px;
+      font-size: 26px;
+      padding: 1%;
+      outline: none;
+    }
+
+    .get-weather-btn {
+      height: 60px;
+      width: 200px;
+      background-color: yellow;
+      border-radius: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s ease-in-out;
+      margin: 2em;
+
+      &:hover {
+        border: 3px solid yellow;
+        background-color: #212121;
+        color: yellow;
+      }
+    }
+
+    .temp-wrapper {
+      text-align: center;
+      font-size: 24px;
+      background-color: #3b3b3b;
+      color: #fff;
+      border: 2px solid yellow;
+      border-radius: 10px;
+      padding: 20px;
+    }
+  }
+}
