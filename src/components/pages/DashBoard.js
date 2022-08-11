@@ -68,7 +68,14 @@ export default function Dashboard() {
             <img src="" alt="" />
           </div>
 
-          <Link to="/boxshadow">Box Shadow</Link>
+          <div className="component-description">
+            <p>
+              This component allows the user to search the Star Wars API and
+              ouput data.
+            </p>
+          </div>
+
+          <Link to="/swapi">SWAPI Search</Link>
         </div>
       </div>
     </div>
