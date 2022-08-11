@@ -9,9 +9,13 @@ function Logout() {
 
   useEffect(() => {
     logout();
-  }, []);
+  }, [logout]);
 
-  return <div>...Logging Out</div>;
+  return (
+    <div className="logging-out">
+      <h1>...Logging Out</h1>
+    </div>
+  );
 }
 
 export default function DefaultContainer() {

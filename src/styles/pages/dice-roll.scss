@@ -1,0 +1,45 @@
+.dice-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 93vh;
+  width: 100vw;
+  background-color: #3b3b3b;
+
+  .dice-wrapper {
+    display: flex;
+
+    .dice-1,
+    .dice-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      width: 200px;
+      margin: 30px;
+      font-size: 150px;
+      border: 3px solid black;
+      border-radius: 10px;
+      box-shadow: 10px 10px 30px 1px;
+      background-color: white;
+    }
+  }
+
+  .dice-button {
+    height: 60px;
+    width: 200px;
+    background-color: yellow;
+    border-radius: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      border: 3px solid yellow;
+      background-color: #212121;
+      color: yellow;
+    }
+  }
+}

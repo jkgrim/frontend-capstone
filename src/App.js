@@ -3,10 +3,13 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import LoginContainer from "./components/auth/LoginContainer";
 import DefaultContainer from "./components/auth/DefaultContainer";
 import { StandardUser } from "./components/helpers/userRoles";
-import Dashboard from "./components/pages/Dashboard";
 import NavBar from "./components/navigation/NavBar";
+import Dashboard from "./components/pages/Dashboard";
 import BoxShadow from "./components/pages/BoxShadow";
+import CoinFlip from "./components/pages/CoinFlip";
+import DiceRoll from "./components/pages/DiceRoll";
 import About from "./components/pages/About";
+import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -22,7 +25,10 @@ function App() {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route path="/boxshadow" component={BoxShadow} />
+          <Route path="/coin-flip" component={CoinFlip} />
+          <Route path="/dice-roll" component={DiceRoll} />
           <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
     </div>

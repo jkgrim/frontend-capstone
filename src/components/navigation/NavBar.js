@@ -10,11 +10,11 @@ export default function NavBar() {
       </div>
 
       <div className="nav-item">
-        <NavLink to="/boxshadow">Box Shadow</NavLink>
+        <NavLink to="/about">About</NavLink>
       </div>
 
       <div className="nav-item">
-        <NavLink to="/about">About</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
       </div>
 
       <div className="nav-item">

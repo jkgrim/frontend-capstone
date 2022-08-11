@@ -1,0 +1,35 @@
+.about-container {
+  height: 110vh;
+  width: 100vw;
+  background-color: #2e2e2e;
+  text-align: center;
+
+  .about-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .about-header {
+      font-size: 36px;
+      color: yellow;
+      text-decoration: underline;
+    }
+
+    .about-content-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #3b3b3b;
+      border-radius: 10px;
+      width: 80%;
+      // text-align: center;
+
+      .about-content {
+        margin: 0 4em;
+        font-size: 24px;
+        color: yellow;
+      }
+    }
+  }
+}

@@ -84,7 +84,7 @@ export default function LoginPage(props) {
         </form>
 
         <div className="create-account">
-          <a href="https://devpipeline-mock-api.herokuapp.com/">
+          <a href="https://devpipeline-mock-api.herokuapp.com/register">
             Create an account
           </a>
         </div>

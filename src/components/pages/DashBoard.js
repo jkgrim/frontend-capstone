@@ -1,12 +1,23 @@
 import { Link } from "react-router-dom";
 
+import boxshadow from "../helpers/images/boxshadow.png";
+import coinflip from "../helpers/images/coinflip.png";
+import diceroll from "../helpers/images/diceroll.png";
+
 export default function Dashboard() {
   return (
     <div className="dashboard-container">
       <div className="dashboard-wrapper">
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src="" alt="" />
+            <img src={boxshadow} alt="" />
+          </div>
+
+          <div className="component-description">
+            <p>
+              This component allows the user to generate a mock boxshadow string
+              for their CSS.
+            </p>
           </div>
 
           <Link to="/boxshadow">Box Shadow</Link>
@@ -14,18 +25,26 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src="" alt="" />
+            <img src={coinflip} alt="" />
           </div>
 
-          <Link to="/boxshadow">Box Shadow</Link>
+          <div className="component-description">
+            <p>This component allows the user to flip a coin.</p>
+          </div>
+
+          <Link to="/coin-flip">Coin Flip</Link>
         </div>
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src="" alt="" />
+            <img src={diceroll} alt="" />
           </div>
 
-          <Link to="/boxshadow">Box Shadow</Link>
+          <div className="component-description">
+            <p>This component allows the user to roll a pair of dice.</p>
+          </div>
+
+          <Link to="/dice-roll">Dice Roll</Link>
         </div>
 
         <div className="component-wrapper">
