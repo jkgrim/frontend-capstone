@@ -11,7 +11,6 @@ import DiceRoll from "./components/pages/DiceRoll";
 import Weather from "./components/pages/Weather";
 import SwapiPage from "./components/pages/SwapiPage";
 import About from "./components/pages/About";
-import Contact from "./components/pages/Contact";
 
 function App() {
   return (
@@ -32,7 +31,6 @@ function App() {
           <Route path="/weather" component={Weather} />
           <Route path="/swapi" component={SwapiPage} />
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
         </Switch>
       </Router>
     </div>

@@ -10,7 +10,7 @@ export default function Weather() {
   const fetchWeather = () => {
     setIsLoading(true);
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=ec553e18c14f73fad1afefa8af0ec191&units=imperial`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER_API_KEY}&units=imperial`
     )
       .then((res) => res.json())
       .then((data) => {

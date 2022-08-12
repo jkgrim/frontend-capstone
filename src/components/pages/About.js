@@ -39,6 +39,18 @@ export default function About() {
               dice.
               <br />
               <br />
+              The weather component allows the user to enter one of over 200,000
+              locations and recieve the current, maximum and minimum
+              temperatures of that selected location at the given time of
+              search.
+              <br />
+              <br />
+              Lastly, the SWAPI search component hits the Star Wars API and
+              renders in a dropdown the different categories of search. After a
+              user selects a search field, a new dropdown appears and runs
+              another API call to render each name associated with the API.
+              Underneath is a button that will open the raw JSON of their given
+              search parameters.
             </p>
           </div>
         </div>

@@ -4,6 +4,7 @@ import boxshadow from "../helpers/images/boxshadow.png";
 import coinflip from "../helpers/images/coinflip.png";
 import diceroll from "../helpers/images/diceroll.png";
 import weather from "../helpers/images/weather.png";
+import swapi from "../helpers/images/swapi.png";
 
 export default function Dashboard() {
   return (
@@ -65,13 +66,13 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src="" alt="" />
+            <img src={swapi} alt="" />
           </div>
 
           <div className="component-description">
             <p>
-              This component allows the user to search the Star Wars API and
-              ouput data.
+              This component allows the user to search the Star Wars API open
+              the JSON of the search result.
             </p>
           </div>
 

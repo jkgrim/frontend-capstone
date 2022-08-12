@@ -3,22 +3,22 @@ import { NavLink, Link } from "react-router-dom";
 export default function NavBar() {
   return (
     <div className="navbar">
-      <div className="nav-item">
-        <NavLink exact to="/dashboard">
-          Dashboard
-        </NavLink>
+      <div className="left-side">
+        <div className="nav-item">
+          <NavLink exact to="/dashboard">
+            Dashboard
+          </NavLink>
+        </div>
+
+        <div className="nav-item">
+          <NavLink to="/about">About</NavLink>
+        </div>
       </div>
 
-      <div className="nav-item">
-        <NavLink to="/about">About</NavLink>
-      </div>
-
-      <div className="nav-item">
-        <NavLink to="/contact">Contact</NavLink>
-      </div>
-
-      <div className="nav-item">
-        <Link to="/logout">Logout</Link>
+      <div className="right-side">
+        <div className="nav-item">
+          <Link to="/logout">Logout</Link>
+        </div>
       </div>
     </div>
   );

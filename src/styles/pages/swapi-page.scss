@@ -1,0 +1,49 @@
+.swapi-container {
+  height: 93vh;
+  width: 100vw;
+  background-color: #2e2e2e;
+
+  .swapi-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .swapi-header {
+      color: yellow;
+      font-size: 32px;
+    }
+
+    select {
+      height: 50px;
+      width: 250px;
+      padding: 1%;
+      font-size: 20px;
+      border-radius: 10px;
+      outline: none;
+    }
+
+    .get-json-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      color: #212121;
+      height: 60px;
+      width: 200px;
+      background-color: yellow;
+      border-radius: 50px;
+      font-size: 24px;
+      cursor: pointer;
+      border: none;
+      transition: 0.3s ease-in-out;
+      margin: 2em;
+
+      &:hover {
+        border: 3px solid yellow;
+        background-color: #212121;
+        color: yellow;
+      }
+    }
+  }
+}
