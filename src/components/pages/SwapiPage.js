@@ -26,7 +26,11 @@ export default function SwapiPage() {
 
   const renderCategories = () => {
     return Object.keys(categoryCounts).map((data) => {
-      return <option value={section === "films" ? null : data}>{data}</option>;
+      return (
+        <option value={section === "films" ? null : data}>
+          {data && data[0].toUpperCase() + data.slice(1)}
+        </option>
+      );
     });
   };
 
