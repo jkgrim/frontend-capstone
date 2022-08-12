@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 
 import { UserContext } from "../UserProvider";
 import Dashboard from "../pages/Dashboard";
+import NoMatch from "../pages/NoMatch";
 
 function Logout() {
   const { logout } = useContext(UserContext);
@@ -23,6 +24,7 @@ export default function DefaultContainer() {
     <Switch>
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/logout" component={Logout} />
+      <Route component={NoMatch} />
     </Switch>
   );
 }
