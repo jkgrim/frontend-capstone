@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function DiceRoll() {
+export default function DiceRoll(props) {
   const [num, setNum] = useState(1);
   const [num2, setNum2] = useState(1);
 
@@ -22,6 +22,12 @@ export default function DiceRoll() {
 
   return (
     <div className="dice-container">
+      <div className="back-btn">
+        <button onClick={() => props.history.push("/dashboard")}>
+          &#60; Back to Dashboard
+        </button>
+      </div>
+
       <div className="dice-wrapper">
         <h2 className="dice-1">{num}</h2>
         <h2 className="dice-2">{num2}</h2>

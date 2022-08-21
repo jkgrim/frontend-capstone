@@ -1,14 +1,8 @@
-/* 
-TODO:
-link to swapi show page
- - url? (api?, custom algorithm)
- - endpoint? (dropdown? (counts api))
-*/
 import { useEffect, useState } from "react";
 
 export default function SwapiPage() {
   const [isLoading, setIsLoading] = useState(false);
-  const [ryanData, setRyanData] = useState([]);
+  const [swapiData, setSwapiData] = useState([]);
   const [subsection, setSubsection] = useState("");
   const [section, setSection] = useState("");
   const [categoryCounts, setCategoryCounts] = useState([]);
@@ -25,9 +19,9 @@ export default function SwapiPage() {
   }, []);
 
   const renderCategories = () => {
-    return Object.keys(categoryCounts).map((data) => {
+    return Object.keys(categoryCounts).map((data, idx) => {
       return (
-        <option value={section === "films" ? null : data}>
+        <option value={section === "films" ? null : data} key={idx}>
           {data && data[0].toUpperCase() + data.slice(1)}
         </option>
       );
@@ -36,38 +30,36 @@ export default function SwapiPage() {
 
   useEffect(() => {
     if (section && categoryCounts && section !== "films") {
-      // if (section === "films") {
-      //   fetch(
-      //     `https://www.swapi.tech/api/${section}?page=1&limit=${categoryCounts.section}`
-      //   )
-      //     .then((res) => res.json())
-      //     .then((data) => {
-      //       // console.log("ryan results", data.result);
-      //       setRyanData(data.result);
-      //     })
-      //     .catch(console.error);
-      // } else {
-      fetch(
-        `https://www.swapi.tech/api/${section}?page=1&limit=${categoryCounts.section}`
-      )
-        .then((res) => res.json())
-        .then((data) => {
-          // console.log("ryan results", data.result);
-          setRyanData(data.results);
-        })
-        .catch(console.error);
+      if (section === "films") {
+        fetch(
+          `https://www.swapi.tech/api/${section}?page=1&limit=${categoryCounts.section}`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            setSwapiData(data.result);
+          })
+          .catch(console.error);
+      } else {
+        fetch(
+          `https://www.swapi.tech/api/${section}?page=1&limit=${categoryCounts.section}`
+        )
+          .then((res) => res.json())
+          .then((data) => {
+            setSwapiData(data.results);
+          })
+          .catch(console.error);
+      }
     }
-    // }
   }, [section, categoryCounts]);
 
-  const renderRyanData = () => {
+  const renderSwapiData = () => {
     return (
       <select onChange={(e) => setSubsection(e.target.value)}>
-        {ryanData.map((data, idx) => {
+        {swapiData.map((data, idx) => {
           console.log("film data", data);
 
           return (
-            <option value={data.uid}>
+            <option value={data.uid} key={idx}>
               {section === "films" ? data?.properties.title : data.name}
             </option>
           );
@@ -75,22 +67,6 @@ export default function SwapiPage() {
       </select>
     );
   };
-
-  // const fetchCategoryResults = (value) => {
-  //   setSection(value);
-
-  //   console.log(section);
-  //   fetch(
-  //     `https://www.swapi.tech/api/${section}?page=1&limit=${categoryCounts.section}`
-  //     // `https://www.swapi.tech/api/people?page=1&limit=82`
-  //   )
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log("ryan results", data);
-  //       setRyanData(data.results);
-  //     })
-  //     .catch(console.error);
-  // };
 
   if (isLoading) {
     return <div>Loading....</div>;
@@ -104,17 +80,14 @@ export default function SwapiPage() {
         </div>
 
         <div className="search-wrapper">
-          <select
-            // onChange={(e) => fetchCategoryResults(e.target.value)}
-            onChange={(e) => setSection(e.target.value)}
-          >
+          <select onChange={(e) => setSection(e.target.value)}>
             <option value="" selected disabled>
               Default
             </option>
             {renderCategories()}
           </select>
 
-          {section.length > 0 ? renderRyanData() : null}
+          {section.length > 0 ? renderSwapiData() : null}
         </div>
 
         <a

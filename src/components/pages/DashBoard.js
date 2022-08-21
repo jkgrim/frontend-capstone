@@ -12,7 +12,7 @@ export default function Dashboard() {
       <div className="dashboard-wrapper">
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src={boxshadow} alt="" />
+            <img src={boxshadow} alt="preview of boxshadow component" />
           </div>
 
           <div className="component-description">
@@ -27,7 +27,7 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src={coinflip} alt="" />
+            <img src={coinflip} alt="preview of coin flip component" />
           </div>
 
           <div className="component-description">
@@ -39,7 +39,7 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src={diceroll} alt="" />
+            <img src={diceroll} alt="preview of dice roll component" />
           </div>
 
           <div className="component-description">
@@ -51,7 +51,7 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src={weather} alt="" />
+            <img src={weather} alt="preview of weather component" />
           </div>
 
           <div className="component-description">
@@ -66,7 +66,7 @@ export default function Dashboard() {
 
         <div className="component-wrapper">
           <div className="preview-img">
-            <img src={swapi} alt="" />
+            <img src={swapi} alt="preview of star wars api component" />
           </div>
 
           <div className="component-description">

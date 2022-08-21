@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function BoxShadow() {
+export default function BoxShadow(props) {
   const [xAxis, setXAxis] = useState(5);
   const [yAxis, setYAxis] = useState(5);
   const [blur, setBlur] = useState(20);
@@ -8,6 +8,12 @@ export default function BoxShadow() {
 
   return (
     <div className="box-shadow-container">
+      <div className="back-btn">
+        <button onClick={() => props.history.push("/dashboard")}>
+          &#60; Back to Dashboard
+        </button>
+      </div>
+
       <div className="box-shadow-wrapper">
         <div
           className="preview-box"

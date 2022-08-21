@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export default function Weather() {
+export default function Weather(props) {
   const [temp, setTemp] = useState("");
   const [tempHigh, setTempHigh] = useState("");
   const [tempLow, setTempLow] = useState("");
@@ -22,8 +22,22 @@ export default function Weather() {
       .catch((err) => console.error("Fetch Weather Error: ", err));
   };
 
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 2000);
+    }
+  }, [isLoading]);
+
   return (
     <div className="weather-container">
+      <div className="back-btn">
+        <button onClick={() => props.history.push("/dashboard")}>
+          &#60; Back to Dashboard
+        </button>
+      </div>
+
       <div className="weather-wrapper">
         <div className="weather-header">
           <h1>What's the weather?</h1>

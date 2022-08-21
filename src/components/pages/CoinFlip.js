@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function CoinFlip() {
+export default function CoinFlip(props) {
   const [toggle, setToggle] = useState(false);
 
   function sleep(ms) {
@@ -25,6 +25,12 @@ export default function CoinFlip() {
   return (
     <div className="App">
       <div className="coin-container">
+        <div className="back-btn">
+          <button onClick={() => props.history.push("/dashboard")}>
+            &#60; Back to Dashboard
+          </button>
+        </div>
+
         <div className="coin-wrapper">
           <h1 className="coin">{toggle ? "Tails" : "Heads"}</h1>
           <button className="coin-button" onClick={headsTails}>
